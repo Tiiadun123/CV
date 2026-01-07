@@ -1,0 +1,325 @@
+/* ========== Reset & Variables ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-bg: #ecf0f1;
+    --text-color: #2c3e50;
+    --text-light: #7f8c8d;
+    --border-color: #bdc3c7;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== Global Styles ========== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* ========== Container ========== */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+/* ========== Header ========== */
+.header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-section {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid white;
+    flex-shrink: 0;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-info p {
+    font-size: 0.95em;
+}
+
+.contact-info a {
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.contact-info a:hover {
+    border-bottom-color: white;
+}
+
+/* ========== Main Content ========== */
+main {
+    padding: 40px;
+}
+
+/* ========== Section ========== */
+.section {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid var(--light-bg);
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.section-title {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--secondary-color);
+    display: inline-block;
+}
+
+.section p {
+    color: var(--text-light);
+    font-size: 0.95em;
+    line-height: 1.8;
+}
+
+/* ========== Skills ========== */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.skill-category {
+    background-color: var(--light-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.skill-category h3 {
+    color: var(--secondary-color);
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.skill-category ul {
+    list-style: none;
+}
+
+.skill-category li {
+    padding: 8px 0;
+    color: var(--text-light);
+    font-size: 0.9em;
+}
+
+.skill-category li strong {
+    color: var(--text-color);
+}
+
+/* ========== Education ========== */
+.education-item {
+    background-color: var(--light-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 15px;
+}
+
+.education-header h3 {
+    color: var(--text-color);
+    font-size: 1.2em;
+}
+
+.year {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+.education-item p {
+    margin: 8px 0;
+    color: var(--text-color);
+}
+
+/* ========== Experience Goals ========== */
+.experience-goals {
+    list-style: none;
+    margin: 15px 0;
+    padding: 0;
+}
+
+.experience-goals li {
+    padding: 10px 0 10px 25px;
+    position: relative;
+    color: var(--text-light);
+}
+
+.experience-goals li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+
+
+/* ========== Placeholder ========== */
+.placeholder {
+    color: #95a5a6;
+    font-style: italic;
+    font-size: 0.95em;
+}
+
+/* ========== Footer ========== */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .profile-info h1 {
+        font-size: 2em;
+    }
+
+    .contact-info {
+        align-items: center;
+        gap: 8px;
+    }
+
+    .education-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 25px;
+    }
+
+    .section {
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .header {
+        padding: 20px;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-info h1 {
+        font-size: 1.6em;
+    }
+
+    .subtitle {
+        font-size: 0.9em;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .section-title {
+        font-size: 1.4em;
+    }
+}
